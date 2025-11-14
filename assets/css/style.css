@@ -1,0 +1,348 @@
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --accent-color: #f72585;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: var(--primary-color) !important;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://picsum.photos/seed/literacy/1920/1080.jpg') center/cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.teacher-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(5px);
+}
+
+.section-title {
+    font-weight: 600;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Improved Work Card Styles */
+.work-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: none;
+}
+
+.work-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.work-card-img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.work-card:hover .work-card-img {
+    transform: scale(1.05);
+}
+
+.work-card .card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.work-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    color: var(--dark-color);
+}
+
+.work-card .card-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #6c757d;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.work-card .text-muted {
+    font-size: 0.85rem;
+}
+
+.work-type-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    z-index: 10;
+}
+
+/* Filter Buttons */
+.filter-btn {
+    border-radius: 20px;
+    padding: 8px 20px;
+    margin: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary-color);
+}
+
+.filter-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+.filter-btn.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.filter-btn.btn-outline-primary {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.filter-btn.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Search Bar */
+.input-group {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.input-group .form-control {
+    border-right: none;
+    border: 1px solid #e0e0e0;
+}
+
+.input-group .btn {
+    border-left: none;
+    border: 1px solid var(--primary-color);
+}
+
+/* Star Method Section */
+.star-method {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.star-method h5 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.star-item {
+    margin-bottom: 15px;
+}
+
+.star-item strong {
+    color: var(--secondary-color);
+}
+
+.star-item div {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Modal Styles */
+.work-modal .modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.work-modal .modal-header {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0;
+}
+
+.work-modal .modal-body {
+    padding: 25px;
+}
+
+.work-modal img {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 70px 0;
+    }
+    
+    .filter-btn {
+        margin: 3px;
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .work-card-img {
+        height: 180px;
+    }
+    
+    .work-card .card-body {
+        padding: 1rem;
+    }
+    
+    .work-card .card-title {
+        font-size: 1rem;
+    }
+    
+    .work-card .card-text {
+        font-size: 0.85rem;
+    }
+}
+
+/* Animation for new elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.work-item {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Better button styles */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Empty state styling */
+.empty-state {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.empty-state i {
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+.empty-state h4 {
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #adb5bd;
+}
